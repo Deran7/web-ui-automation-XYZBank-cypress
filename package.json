@@ -1,0 +1,20 @@
+{
+  "name": "web-ui-automation-xyzbank",
+  "version": "1.0.0",
+  "description": "cypress end to end with pom in website xyz bank",
+  "main": "index.js",
+  "repository": "https://github.com/Deran7/web-ui-automation-XYZBank.git",
+  "author": "Alderan Robi <alderanrobiaulia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@faker-js/faker": "^7.6.0",
+    "babel-plugin-module-resolver": "4.1.0",
+    "cypress": "^12.6.0",
+    "prettier": "^2.8.4"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  }
+}
