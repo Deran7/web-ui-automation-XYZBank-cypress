@@ -5,3 +5,9 @@ export const ADD_DATA_CUSTOMER = {
     lastname: generator.lastName(),
     postcode: generator.postCode()
 }
+
+export const DATA_CUSTOMER = {
+    firstname: "Hermoine",
+    lastname: "Granger",
+    postcode: "E859AB"
+}

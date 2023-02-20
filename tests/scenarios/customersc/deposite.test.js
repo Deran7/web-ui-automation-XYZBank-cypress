@@ -19,7 +19,7 @@ describe('Deposite Customer', () => {
         // Account Number Field
         element.selectDropdown(depositePage.accountNumberField, "1001")
 
-        // Deposite
+        // Deposite Dollar
         element.click(depositePage.depositButton)
         element.fillField(depositePage.amoundtobeDeposit, customerData.DEPOSITE_AMOUNT.dollar)
         element.click(depositePage.submitdepositButton)
@@ -38,7 +38,7 @@ describe('Deposite Customer', () => {
         element.selectDropdown(depositePage.accountNumberField, "1002")
 
 
-        // Deposite
+        // Deposite Pound
         element.click(depositePage.depositButton)
         element.fillField(depositePage.amoundtobeDeposit, customerData.DEPOSITE_AMOUNT.pound)
         element.click(depositePage.submitdepositButton)
@@ -56,7 +56,7 @@ describe('Deposite Customer', () => {
         // Account Number Field
         element.selectDropdown(depositePage.accountNumberField, "1003")
 
-        // Deposite
+        // Deposite rupee
         element.click(depositePage.depositButton)
         element.fillField(depositePage.amoundtobeDeposit, customerData.DEPOSITE_AMOUNT.rupee)
         element.click(depositePage.submitdepositButton)
