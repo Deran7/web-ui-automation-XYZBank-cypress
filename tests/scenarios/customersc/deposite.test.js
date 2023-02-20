@@ -1,5 +1,6 @@
 import * as route from '@helpers/route.js';
 import { ROUTES } from '@tests/const/routes.js';
+import * as asserts from '@helpers/asserts.js';
 import * as element from '@helpers/elements.js';
 import * as loginPage from '@pages/customerpg/login-cs.page.js';
 import * as depositePage from '@pages/customerpg/deposite.page.js';
@@ -12,6 +13,7 @@ describe('Deposite Customer', () => {
     });
 
     it.only('As a user, I want to deposit using dollar currency ', () => {
+        // Login Hermoine Granger
         element.click(loginPage.customerLoginButton)
         element.selectDropdown(loginPage.selectCustomer, "Hermoine Granger")
         element.click(loginPage.loginButton)
@@ -23,13 +25,11 @@ describe('Deposite Customer', () => {
         element.click(depositePage.depositButton)
         element.fillField(depositePage.amoundtobeDeposit, customerData.DEPOSITE_AMOUNT.dollar)
         element.click(depositePage.submitdepositButton)
-    });
-
-    beforeEach(() => {
-        route.visit(ROUTES.deposite) 
+        asserts.shouldContaintText(depositePage.succesAllert, "Deposit Successful")
     });
 
     it.only('As a user, I want to deposit using pound currency ', () => {
+        // Login Hermoine Granger
         element.click(loginPage.customerLoginButton)
         element.selectDropdown(loginPage.selectCustomer, "Hermoine Granger")
         element.click(loginPage.loginButton)
@@ -44,11 +44,8 @@ describe('Deposite Customer', () => {
         element.click(depositePage.submitdepositButton)
     });
 
-    beforeEach(() => {
-        route.visit(ROUTES.deposite) 
-    });
-
     it.only('As a user, I want to deposit using rupee currency ', () => {
+        // Login Hermoine Granger
         element.click(loginPage.customerLoginButton)
         element.selectDropdown(loginPage.selectCustomer, "Hermoine Granger")
         element.click(loginPage.loginButton)

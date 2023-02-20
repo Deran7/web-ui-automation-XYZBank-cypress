@@ -5,3 +5,4 @@ export function shouldContaintText(selector, ...args){
 export function shouldIncludeURL(uri){
     return cy.visit(uri);
 }
+

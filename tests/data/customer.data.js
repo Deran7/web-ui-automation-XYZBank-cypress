@@ -5,7 +5,7 @@ export const DEPOSITE_AMOUNT = {
 }
 
 export const WITHDRAWL_AMOUNT = {
-    dollar: 100,
-    pound: 100,
-    rupee: 100
+    dollar: "100",
+    pound: "100",
+    rupee: "100"
 }

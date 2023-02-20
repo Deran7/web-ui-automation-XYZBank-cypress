@@ -9,7 +9,7 @@ import * as customerPage from '@pages/managerpg/customer.page.js';
 
 
 
-describe('Customer', () => {
+describe('Customer Positive Case', () => {
 
     beforeEach(() => {
         route.visit(ROUTES.login)
@@ -40,5 +40,57 @@ describe('Customer', () => {
         element.fillField(customerPage.searchcustomerField, data.DATA_CUSTOMER.firstname)
         element.fillField(customerPage.searchcustomerField, data.DATA_CUSTOMER.lastname)
         element.fillField(customerPage.searchcustomerField, data.DATA_CUSTOMER.postcode)
+    });
+
+    it.only('As a bank manager, I want to delete registered users with the name Hermoine Granger', () => {
+        
+        // Login Manager
+        element.click(loginPage.managerLoginButton)
+        asserts.shouldContaintText(loginPage.addCustomerButton, 'Add Customer')
+        asserts.shouldContaintText(loginPage.openAccountButton, 'Open Account')
+        asserts.shouldContaintText(loginPage.customerButton, 'Customers')
+        
+        // Customer Page
+        element.click(customerPage.customerButton)
+        element.click(customerPage.deletecustomerButton1)
+    });
+
+    it.only('As a bank manager, I want to delete registered users with the name Harry Potter', () => {
+        
+        // Login Manager
+        element.click(loginPage.managerLoginButton)
+        asserts.shouldContaintText(loginPage.addCustomerButton, 'Add Customer')
+        asserts.shouldContaintText(loginPage.openAccountButton, 'Open Account')
+        asserts.shouldContaintText(loginPage.customerButton, 'Customers')
+        
+        // Customer Page
+        element.click(customerPage.customerButton)
+        element.click(customerPage.deletecustomerButton2)
+    });
+
+    it.only('As a bank manager, I want to delete registered users with the name Ron Weasly', () => {
+        
+        // Login Manager
+        element.click(loginPage.managerLoginButton)
+        asserts.shouldContaintText(loginPage.addCustomerButton, 'Add Customer')
+        asserts.shouldContaintText(loginPage.openAccountButton, 'Open Account')
+        asserts.shouldContaintText(loginPage.customerButton, 'Customers')
+        
+        // Customer Page
+        element.click(customerPage.customerButton)
+        element.click(customerPage.deletecustomerButton3)
+    });
+
+    it.only('As a bank manager, I want to delete registered users with the name Albus Dumbledore', () => {
+        
+        // Login Manager
+        element.click(loginPage.managerLoginButton)
+        asserts.shouldContaintText(loginPage.addCustomerButton, 'Add Customer')
+        asserts.shouldContaintText(loginPage.openAccountButton, 'Open Account')
+        asserts.shouldContaintText(loginPage.customerButton, 'Customers')
+        
+        // Customer Page
+        element.click(customerPage.customerButton)
+        element.click(customerPage.deletecustomerButton4)
     });
 })

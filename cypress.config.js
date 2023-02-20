@@ -29,3 +29,4 @@ module.exports = defineConfig({
     specPattern: 'tests/scenarios/**/*.test.js'
   },
 });
+

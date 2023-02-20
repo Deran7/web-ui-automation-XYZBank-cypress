@@ -11,21 +11,23 @@ describe('Transaction Customer', () => {
     });
 
     it.only('As a user, I want to verify the transaction that I have made ', () => {
+        // Login Hermoine Granger
         element.click(loginPage.customerLoginButton)
         element.selectDropdown(loginPage.selectCustomer, "Hermoine Granger")
         element.click(loginPage.loginButton)
 
-        // Transaction
+        // Transaction Hermoine Granger
         element.click(transactionPage.transactionButton)
         element.click(transactionPage.nextButton)
     });
 
     it.only('As a user, I want to reset all of my transactions that are listed in the transactions menu', () => {
+        // Login Hermoine Granger
         element.click(loginPage.customerLoginButton)
         element.selectDropdown(loginPage.selectCustomer, "Hermoine Granger")
         element.click(loginPage.loginButton)
 
-        // Transaction Reset
+        // Transaction Reset Hermoine Granger
         element.click(transactionPage.transactionButton)
         element.click(transactionPage.nextButton)
         element.click(transactionPage.resetButton)
