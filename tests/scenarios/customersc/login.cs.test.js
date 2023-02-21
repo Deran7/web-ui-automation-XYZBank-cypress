@@ -37,10 +37,4 @@ describe('Login Customer', () => {
         element.click(loginPage.loginButton)
         assert.shouldContaintText(loginPage.welcomeText, "Welcome Albus Dumbledore")
     });
-    it.only('Should succes login with data valid "Neville Longbottom"', () => {
-        element.click(loginPage.customerLoginButton)
-        element.selectDropdown(loginPage.selectCustomer, "Neville Longbottom")
-        element.click(loginPage.loginButton)
-        assert.shouldContaintText(loginPage.welcomeText, "Neville Longbottom")
-    });
 })
